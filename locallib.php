@@ -90,6 +90,8 @@ class enrol_apply_enrol_form extends moodleform {
         }
         
         if($show_extra_user_profile){
+            // We need to load custom fields 
+            profile_load_data($user);
             profile_definition($mform, $user->id);
         }
 
